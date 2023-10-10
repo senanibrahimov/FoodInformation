@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FoodApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:statusBarColor" >@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.FoodApp" parent="Base.Theme.FoodApp" />
+
+
+    <style name="toolbartext" parent="@style/TextAppearance.AppCompat.Title">
+
+        <item name="android:textSize">25sp</item>
+        <item name="fontFamily">@font/myfont</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="collapsingtoolbarTitleExpanded" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">40sp</item>
+        <item name="fontFamily">@font/myfont</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="collapsingtoolbarTitleCollapesed" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/myfont</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_top_shape</item>
+    </style>
+</resources>

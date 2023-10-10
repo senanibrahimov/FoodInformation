@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="270dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="MealName"
+            app:titleCollapseMode="scale"
+            android:background="@color/accent"
+            app:contentScrim="@color/accent"
+              app:collapsedTitleTextColor="@color/white"
+             app:expandedTitleTextColor="@color/white"
+            app:expandedTitleMarginStart="40dp"
+             app:collapsedTitleTextAppearance="@style/collapsingtoolbarTitleCollapesed"
+
+            app:expandedTitleTextAppearance="@style/collapsingtoolbarTitleExpanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:id="@+id/collapsingtoolbar">
+            <ImageView
+                android:id="@+id/imageview_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                >
+
+            </ImageView>
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/fab_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_favorite_border_24"
+         app:backgroundTint="@color/accent"
+         app:tint="@color/white"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_marginEnd="10dp"
+        app:elevation="0dp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/catogory_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Catagory:yemek"
+                android:textColor="@color/g_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:drawableTint="@color/g_black"
+                android:gravity="center"
+                android:drawableLeft="@drawable/bxs_category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Area_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="80dp"
+                android:drawableLeft="@drawable/bx_location_plus"
+                android:drawableTint="@color/g_black"
+                android:gravity="center"
+                android:text="Area:boldgggg"
+                android:textColor="@color/g_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/Instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:text=" Instructions-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/catogory_meal" />
+
+            <TextView
+                android:id="@+id/deatiltext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Instructions" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ImageView
+        android:id="@+id/youtube_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+         android:src="@drawable/baseline_ondemand_video_24"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="10dp">
+
+    </ImageView>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressindicator"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_anchor="@id/appbar"
+        app:indicatorColor="@color/accent"
+        app:layout_anchorGravity="bottom">
+
+    </com.google.android.material.progressindicator.LinearProgressIndicator>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

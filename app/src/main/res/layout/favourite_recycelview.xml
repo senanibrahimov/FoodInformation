@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:paddingBottom="3dp"
+            android:layout_gravity="center"
+
+            >
+
+            <ImageView
+                android:id="@+id/favouritesimage"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@color/accent" />
+
+            <TextView
+                android:id="@+id/favouitename"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:paddingEnd="6dp"
+                android:text="mealname"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/favouritesimage"
+                app:layout_constraintStart_toStartOf="@+id/favouritesimage"
+                app:layout_constraintTop_toBottomOf="@+id/favouritesimage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
